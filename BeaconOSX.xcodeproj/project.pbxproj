@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F19EA0520471E7B00E19AF2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C9747CC61823FF980031E32F /* BLCBeaconAdvertisementData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCBeaconAdvertisementData.h; sourceTree = "<group>"; };
 		C9747CC71823FF980031E32F /* BLCBeaconAdvertisementData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCBeaconAdvertisementData.m; sourceTree = "<group>"; };
 		C9ACECFC1823C3B7000FFBFA /* IOBluetoothUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetoothUI.framework; path = System/Library/Frameworks/IOBluetoothUI.framework; sourceTree = SDKROOT; };
@@ -86,6 +87,7 @@
 		C9B7A2F41823BEB900D61F59 = {
 			isa = PBXGroup;
 			children = (
+				1F19EA0520471E7B00E19AF2 /* README.md */,
 				C9B7A3061823BEB900D61F59 /* BeaconOSX */,
 				C9B7A3241823BEB900D61F59 /* BeaconOSXTests */,
 				C9B7A2FF1823BEB900D61F59 /* Frameworks */,
@@ -404,8 +406,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeaconOSX/BeaconOSX-Prefix.pch";
 				INFOPLIST_FILE = "BeaconOSX/BeaconOSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -418,8 +421,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BeaconOSX/BeaconOSX-Prefix.pch";
 				INFOPLIST_FILE = "BeaconOSX/BeaconOSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -43,6 +43,7 @@ static NSString *kBLCUserDefaultsMeasuredPower = @"kBLCUserDefaultsMeasuredPower
 #import "BLCAppDelegate.h"
 
 #import <IOBluetooth/IOBluetooth.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
 #import "BLCBeaconAdvertisementData.h"
 
@@ -64,25 +65,6 @@ static NSString *kBLCUserDefaultsMeasuredPower = @"kBLCUserDefaultsMeasuredPower
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
-    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
-    NSArray *versionStringComponents = [[processInfo operatingSystemVersionString] componentsSeparatedByString:@" "];
-    NSArray *version = [[versionStringComponents objectAtIndex:1] componentsSeparatedByString:@"."];
-
-    NSInteger major = [[version objectAtIndex:0] integerValue];
-    NSInteger minor = [[version objectAtIndex:1] integerValue];
-        
-    if (major == 10 && minor != 9) {
-        NSAlert* alert = [NSAlert alertWithMessageText:@"Unsupported OS"
-                                         defaultButton:@"OK"
-                                       alternateButton:nil
-                                           otherButton:nil
-                             informativeTextWithFormat:@"BeaconOSX requires OS X Mavericks!!!\n\nBeaconOSX does NOT work with versions of OS X before or after Mavericks, e.g. Yosemite"];
-        
-        [alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
-            exit(-1);
-        }];
-    }
-
     _manager = [[CBPeripheralManager alloc] initWithDelegate:self
                                                        queue:nil];
     [self.startbutton setEnabled:NO];

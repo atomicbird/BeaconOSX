@@ -1,10 +1,9 @@
-Mavericks (not Yosemite) as an iBeacon
+macOS as an iBeacon
 ===
 
-**NOTE: THIS DOES NOT WORK IN YOSEMITE!!!  Apple have closed the loophole that
-allowed a Mac to be used as an iBeacon in Mavericks.**
+Simulate an iBeacon on macOS 10.13 "High Sierra".
 
-Use a Bluetooth 4 enabled Mac running **Mavericks** (not Yosemite) as an iBeacon.
+This might work if the target is changed to older versions of macOS, I haven't tested that.
 
 See http://www.blendedcocoa.com/blog/2013/11/02/mavericks-as-an-ibeacon/ for more details.
 
@@ -15,6 +14,8 @@ Contributors
 Original Mavericks iBeacon support by Matthew Robinson (matt@zensunni.org).
 
 User Interface provided by Falko Richter (falko at briefhansa dot de).
+
+Minor changes for High Sierra compatibility by Tom Harrington (@atomicbird)
 
 License
 ===
